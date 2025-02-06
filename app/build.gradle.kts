@@ -40,4 +40,9 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+// dependency 접근법이 libs로 바뀜 retrofit, rest api 사용하기 위함
+    implementation(libs.retrofit2.converter.scalars)
+    implementation(libs.converter.gson)
+    implementation(libs.logging.interceptor)
+    implementation(libs.retrofit)
 }

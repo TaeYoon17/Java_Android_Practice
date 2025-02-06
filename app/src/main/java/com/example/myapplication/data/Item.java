@@ -1,6 +1,6 @@
-package com.example.myapplication;
+package com.example.myapplication.data;
 
-public class Item {
+public final class Item {
     private int iv_profile;
     private String tv_name;
     private String tv_desc;

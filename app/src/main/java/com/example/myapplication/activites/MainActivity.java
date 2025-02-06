@@ -1,28 +1,27 @@
-package com.example.myapplication;
+package com.example.myapplication.activites;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Debug;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.myapplication.CatRecyclerViewAdapter;
+import com.example.myapplication.R;
+import com.example.myapplication.data.Item;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    ArrayList<Item> items = new ArrayList<Item>(
+    ArrayList<Item> items = new ArrayList<>(
         Arrays.asList(
             new Item(2,"a","arduino"),
             new Item(3,"b","breadboard"),
@@ -57,11 +56,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // helloBtn 설정
         button = findViewById(R.id.helloBtn);
-        button.setOnClickListener(this);
+        button.setOnClickListener(v->{
+            Intent intent = new Intent(this, WeatherActivity.class);
+            intent.putExtra("hello",12345);
+            intent.putExtra("wow","Cold day");
+            startActivity(intent);
+        });
 
         // webBtn 설정
         Button webBtn = findViewById(R.id.webBtn);
         webBtn.setOnClickListener(v -> {
+            Toast.makeText(this.getApplicationContext(),
+                            "Hello",Toast.LENGTH_SHORT)
+                    .show();
             openNaver();
         });
     }
@@ -72,9 +79,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        Toast.makeText(this.getApplicationContext(),
-                "Hello",Toast.LENGTH_SHORT)
-                .show();
+
     }
 
     void openNaver(){

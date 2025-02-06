@@ -11,12 +11,14 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplication.data.Item;
+
 import java.util.ArrayList;
 
 public class CatRecyclerViewAdapter extends RecyclerView.Adapter {
     private final ArrayList<Item> items;
 
-    CatRecyclerViewAdapter(ArrayList<Item> items){
+    public CatRecyclerViewAdapter(ArrayList<Item> items){
         Log.d("a","durlsdfasdfasdf");
         this.items = items;
     }
