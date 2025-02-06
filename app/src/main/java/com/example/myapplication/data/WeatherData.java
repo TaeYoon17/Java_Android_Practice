@@ -8,19 +8,19 @@ import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 
 public final class WeatherData {
-    @Expose @SerializedName("cood") Coord coord;
-    @Expose @SerializedName("weather") ArrayList<Weather> weather;
-    @Expose @SerializedName("base") String base;
-    @Expose @SerializedName("main") Main main;
-    @Expose @SerializedName("visibility") int visibility;
-    @Expose @SerializedName("wind") Wind wind;
-    @Expose @SerializedName("clouds") Clouds clouds;
-    @Expose @SerializedName("dt") int dt;
-    @Expose @SerializedName("sys") Sys sys;
-    @Expose @SerializedName("timezone") int timezone;
-    @Expose @SerializedName("id") int id;
-    @Expose @SerializedName("name") String name;
-    @Expose @SerializedName("cod") int cod;
+    public @Expose @SerializedName("weather") ArrayList<Weather> weather;
+    public @Expose @SerializedName("coord") Coord coord;
+    public @Expose @SerializedName("base") String base;
+    public @Expose @SerializedName("main") Main main;
+    public @Expose @SerializedName("visibility") int visibility;
+    public @Expose @SerializedName("wind") Wind wind;
+    public @Expose @SerializedName("clouds") Clouds clouds;
+    public @Expose @SerializedName("dt") int dt;
+    public @Expose @SerializedName("sys") Sys sys;
+    public @Expose @SerializedName("timezone") int timezone;
+    public @Expose @SerializedName("id") int id;
+    public @Expose @SerializedName("name") String name;
+    public @Expose @SerializedName("cod") int cod;
 
 
 
