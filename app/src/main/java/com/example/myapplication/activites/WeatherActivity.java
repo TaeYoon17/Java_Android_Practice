@@ -61,7 +61,8 @@ public class WeatherActivity extends AppCompatActivity {
         );
         call.enqueue(new Callback<WeatherData>(){
             @Override
-            public void onResponse(Call<WeatherData> call, retrofit2.Response<WeatherData> response) {
+            public void onResponse(Call<WeatherData> call,
+                                   retrofit2.Response<WeatherData> response) {
                 if (response.isSuccessful() && response.body() != null){
                     WeatherData weatherData = response.body();
                     WeatherActivity.this.txtView.setText(weatherData.name);

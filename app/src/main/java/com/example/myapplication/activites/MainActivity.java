@@ -38,11 +38,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         )
     );
 
-    Button button;
+    Button button,naviOpenBtn;
     RecyclerView recyclerView;
     CatRecyclerViewAdapter catAdapter;
     LinearLayoutManager linearLayoutManager;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,6 +69,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             "Hello",Toast.LENGTH_SHORT)
                     .show();
             openNaver();
+        });
+        naviOpenBtn = findViewById(R.id.bottomNaviBtn);
+
+        naviOpenBtn.setOnClickListener(V -> {
+            Intent intent = new Intent(this, BottomActivity.class);
+            intent.putExtra("zzz",12345);
+            startActivity(intent);
         });
     }
     @Override
