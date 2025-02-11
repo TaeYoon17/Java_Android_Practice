@@ -23,8 +23,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activites.WeatherActivity"/>
-        <activity android:name=".activites.BottomActivity"/>
+        <activity android:name=".activites.WeatherActivity" />
+        <activity android:name=".activites.BottomActivity" >
+
+        </activity>
     </application>
 
 </manifest>
