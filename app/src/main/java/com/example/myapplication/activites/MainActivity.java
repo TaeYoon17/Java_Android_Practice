@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         )
     );
 
-    Button button,naviOpenBtn;
+    Button button, naviOpenBtn, linearBtn, fragmentBtn;
     RecyclerView recyclerView;
     CatRecyclerViewAdapter catAdapter;
     LinearLayoutManager linearLayoutManager;
@@ -75,6 +75,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         naviOpenBtn.setOnClickListener(V -> {
             Intent intent = new Intent(this, BottomActivity.class);
             intent.putExtra("zzz",12345);
+            startActivity(intent);
+        });
+        linearBtn = findViewById(R.id.linearBtn);
+        linearBtn.setOnClickListener(V->{
+            Intent intent = new Intent(this, LinearFirstActivity.class);
+            startActivity(intent);
+        });
+
+        fragmentBtn = findViewById(R.id.fragBtn);
+        fragmentBtn.setOnClickListener(V->{
+            Intent intent = new Intent(this, FirstFrameActivity.class);
             startActivity(intent);
         });
     }

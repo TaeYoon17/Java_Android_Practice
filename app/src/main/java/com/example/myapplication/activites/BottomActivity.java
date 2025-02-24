@@ -9,8 +9,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.myapplication.R;
+import com.example.myapplication.fragments.FisrtFragment;
 
 public class BottomActivity extends AppCompatActivity {
 
@@ -23,6 +26,9 @@ public class BottomActivity extends AppCompatActivity {
         int number = getIntent().getIntExtra("zzz",0);
         Toolbar toolbar = findViewById(R.id.bottom_toolbar);
         setSupportActionBar(toolbar);
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        Fragment fisrtFragment = new FisrtFragment();  //이동할 프래그먼트
+        
     }
 
     @Override
