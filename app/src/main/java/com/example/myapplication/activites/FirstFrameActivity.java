@@ -1,7 +1,11 @@
 package com.example.myapplication.activites;
 
+import static android.view.View.INVISIBLE;
+import static android.view.View.VISIBLE;
+
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -12,6 +16,7 @@ import com.example.myapplication.R;
 
 public class FirstFrameActivity extends AppCompatActivity {
     LinearLayout baseLayout;
+    FrameLayout frame1,frame2,frame3;
     ImageView img1,img2,img3;
     Button chBtnImg;
     int idx = 0;
@@ -22,24 +27,24 @@ public class FirstFrameActivity extends AppCompatActivity {
         img1 = findViewById(R.id.img1);
         img2 = findViewById(R.id.img2);
         img3 = findViewById(R.id.img3);
-        img1.setActivated(true);
-        img2.setActivated(false);
-        img3.setActivated(false);
+        img1.setVisibility(VISIBLE);
+        img2.setVisibility(INVISIBLE);
+        img3.setVisibility(INVISIBLE);
         chBtnImg = findViewById(R.id.chImageBtn);
         chBtnImg.setOnClickListener(V->{
             int val = (idx++) % 3;
             if(val == 0){
-                img1.setActivated(true);
-                img2.setActivated(false);
-                img3.setActivated(false);
+                img1.setVisibility(INVISIBLE);
+                img2.setVisibility(VISIBLE);
+                img3.setVisibility(INVISIBLE);
             }else if(val == 1){
-                img1.setActivated(false);
-                img2.setActivated(true);
-                img3.setActivated(false);
+                img1.setVisibility(INVISIBLE);
+                img2.setVisibility(VISIBLE);
+                img3.setVisibility(INVISIBLE);
             }else if(val == 2){
-                img1.setActivated(false);
-                img2.setActivated(false);
-                img3.setActivated(true);
+                img1.setVisibility(INVISIBLE);
+                img2.setVisibility(INVISIBLE);
+                img3.setVisibility(VISIBLE);
             }
         });
     }
