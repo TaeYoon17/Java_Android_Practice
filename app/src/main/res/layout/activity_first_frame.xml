@@ -25,32 +25,42 @@
             />
     </LinearLayout>
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <ImageView
-            android:id="@+id/img1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="Fisrt Image"
-            android:visibility="invisible"
-            app:srcCompat="@drawable/live_concetnrate"
-            />
-        <ImageView
-            android:id="@+id/img2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="Second Image"
-            android:visibility="invisible"
-            app:srcCompat="@drawable/live_confidence"
-            />
-        <ImageView
-            android:id="@+id/img3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="Third Image"
-            android:visibility="visible"
-            app:srcCompat="@drawable/live_destress"
-            />
+        android:layout_width="200dp"
+        android:layout_height="200dp">
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="Fisrt Image"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/live_concetnrate"
+                    />
+                <ImageView
+                    android:id="@+id/img2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="Second Image"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/live_confidence"
+                    />
+                <ImageView
+                    android:id="@+id/img3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="Third Image"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/live_destress"
+                    />
+
+            </ScrollView>
+        </HorizontalScrollView>
+
     </FrameLayout>
 
 </LinearLayout>

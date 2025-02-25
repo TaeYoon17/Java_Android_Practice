@@ -3,6 +3,7 @@ package com.example.myapplication.activites;
 import static android.view.View.INVISIBLE;
 import static android.view.View.VISIBLE;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.FrameLayout;
@@ -30,6 +31,10 @@ public class FirstFrameActivity extends AppCompatActivity {
         img1.setVisibility(VISIBLE);
         img2.setVisibility(INVISIBLE);
         img3.setVisibility(INVISIBLE);
+
+        Resources resources = getResources();
+
+
         chBtnImg = findViewById(R.id.chImageBtn);
         chBtnImg.setOnClickListener(V->{
             int val = (idx++) % 3;
